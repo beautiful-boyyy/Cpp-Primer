@@ -1,5 +1,7 @@
 #include <iostream>
 #include <typeinfo>
+using namespace std;
+
 
 int main()
 {
@@ -7,7 +9,10 @@ int main()
     auto j = i;
     const auto &k = i;
     auto *p = &i;
+    cout << p << endl;
+    cout << *p << endl;
     const auto j2 = i, &k2 = i;
+    ++i, ++k2;
 
     // print i means int, and PKi means pointer to const int.
     std::cout   << "j is "      << typeid(j).name()

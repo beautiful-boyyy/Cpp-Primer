@@ -9,9 +9,9 @@ using std::endl;
 
 int main()
 {
-    string str("a simple string");
-    for (auto &c : str) c = 'X';
-    cout << str << endl;
-
+    const string a = "dad";
+    auto b = a;
+    b = "mom";
+    cout << b << " " << a << endl;
     return 0;
 }

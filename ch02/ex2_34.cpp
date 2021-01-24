@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
@@ -10,6 +11,7 @@ int main()
     auto c = cr; // c is an int (cr is an alias for ci whose const is top-level)
     auto d = &i; // d is an int* (& ofan int objectis int*)
     auto e = &ci; // e is const int*(& of a const object is low-level const)
+    cout << ++(*e) << endl;
 
     const auto f = ci; // deduced type of ci is int; f has type const int
     auto &g = ci; // g is a const int& that is bound to ci
