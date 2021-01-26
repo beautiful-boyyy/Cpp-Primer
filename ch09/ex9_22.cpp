@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+using std::endl;
+using std::cout;
 
 void double_and_insert(std::vector<int>& v, int some_val)
 {
@@ -12,6 +14,7 @@ void double_and_insert(std::vector<int>& v, int some_val)
 int main()
 {
     std::vector<int> v{ 1, 9, 1, 9, 9, 9, 1, 1 };
+    cout << v.capacity() << endl;
     double_and_insert(v, 1);
 
     for (auto i : v) 
