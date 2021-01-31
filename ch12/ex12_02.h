@@ -9,10 +9,9 @@
 #include <vector>
 #include <string>
 #include <initializer_list>
-#include <iostream>
 #include <memory>
-//#include <exception>
 #include <stdexcept>
+#include <iostream>
 
 using std::vector; using std::string;
 
@@ -32,24 +31,26 @@ public:
         data->pop_back();
     }
 
-    //std::string& front() {
-    //    check(0, "front on empty StrBlob");
-    //    return data->front();
-    //}
-
-    //std::string& back() {
-    //    check(0, "back on empty StrBlob");
-    //    return data->back();
-    //}
-
-    std::string& front() const {
+    std::string& front() {
         check(0, "front on empty StrBlob");
-        std::cout << "Const version" << " ";
+        std::cout << "Non-const Version" << std::endl;
         return data->front();
     }
-    std::string& back() const {
+
+    std::string& back() {
         check(0, "back on empty StrBlob");
-        std::cout << "Const version" << " ";
+        std::cout << "Non-const Version" << std::endl;
+        return data->back();
+    }
+
+    const std::string& front() const {
+        check(0, "front on empty StrBlob");
+        std::cout << "Const Version" << std::endl;
+        return data->front();
+    }
+    const std::string& back() const {
+        check(0, "back on empty StrBlob");
+        std::cout << "Const Version" << std::endl;
         return data->back();
     }
 

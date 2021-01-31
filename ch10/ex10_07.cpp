@@ -30,6 +30,7 @@ int main()
     while (cin >> i)
         lst.push_back(i);
 
+    //copy(lst.cbegin(), lst.cend(), vec.begin());
     copy(lst.cbegin(), lst.cend(), back_inserter(vec));
     // Fixed: the vec.begin() was replaced by a back_inserter iterator, capable of
     // insert new elements automatically at the end of the container.

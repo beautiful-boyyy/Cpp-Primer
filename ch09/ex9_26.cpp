@@ -1,5 +1,3 @@
-//
-// @author @huangjuncmj @Yue Wang
 // @date   19.11.2014
 //
 // Exercise 9.26:
@@ -8,17 +6,18 @@
 // list and the even values from your vector.
 //
 #include <iostream>
+#include <iterator>
 #include <vector>
 #include <list>
 
-using std::vector; using std::list; using std::cout; using std::endl; using std::end;
+using std::vector; using std::begin; using std::list; using std::cout; using std::endl; using std::end;
 
 int main()
 {
     int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 };
 
     // init
-    vector<int> vec(ia, end(ia));
+    vector<int> vec(begin(ia), end(ia));
     list<int> lst(vec.begin(), vec.end());
 
     // remove odd value

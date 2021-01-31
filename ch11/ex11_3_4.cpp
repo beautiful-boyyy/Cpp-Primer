@@ -9,6 +9,7 @@
 // all increment the same counter.
 //
 
+#include <cstdio>
 #include <iostream>
 #include <map>
 #include <string>
@@ -57,6 +58,7 @@ int main()
     print(count());
     cin.clear();
     cout << "[ex11.4] Enter a few words please:\n";
+    clearerr(stdin);
     print(strip_and_count());
 
     return 0;

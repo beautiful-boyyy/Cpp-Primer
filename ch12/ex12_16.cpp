@@ -17,7 +17,7 @@ using std::string; using std::unique_ptr;
 int main()
 {
     unique_ptr<string> p1(new string("pezy"));
-    // unique_ptr<string> p2(p1); // copy
+    //unique_ptr<string> p2(p1); // copy
     //                      ^
     // Error: Call to implicitly-deleted copy constructor of 'unique_ptr<string>'
     //

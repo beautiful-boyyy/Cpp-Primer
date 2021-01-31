@@ -66,8 +66,7 @@ int main()
     /**
      * @brief   Recommended.
      */
-    //IntP p4(new int(2048));
-
+    IntP p4(new int(2048));
 
     /**
      * @brief   error:   double free or corruption at run time

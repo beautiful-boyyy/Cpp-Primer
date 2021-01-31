@@ -32,7 +32,7 @@ is_shorter(std::string const& lhs, std::string const& rhs)
 
 void elimdups(std::vector<std::string> &vs)
 {
-    std::sort(vs.begin(), vs.end());
+    std::stable_sort(vs.begin(), vs.end(), is_shorter);
     auto new_end = std::unique(vs.begin(), vs.end());
     vs.erase(new_end, vs.end());
 }
@@ -44,7 +44,6 @@ int main()
         "1234", "1234", "1234", "Hi", "alan", "wang"
     };
     elimdups(v);
-    std::stable_sort(v.begin(), v.end(), is_shorter);
     std::cout << "ex10.11 :\n";
     println(v);
 

@@ -30,6 +30,5 @@ int main()
     for (int pos = 0; (pos = str.find_first_of(alphabet, pos)) != string::npos; ++pos)
         cout << str[pos] << " ";
     cout << endl;
-
     return 0;
 }

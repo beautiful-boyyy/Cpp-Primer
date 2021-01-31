@@ -18,7 +18,7 @@ int main()
     int size{ 0 };
     std::cin >> size;
     char *input = new char[size+1]();
-    std::cin.ignore();
+    std::cin.ignore(100, '\n');
     std::cout << "input the string: ";
     std::cin.get(input, size+1);
     std::cout << input;
